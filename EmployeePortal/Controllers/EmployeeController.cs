@@ -122,22 +122,22 @@ namespace EmployeePortal.Controllers
             return View(vm);
         }
 
-        //[HttpGet]
-        //public async Task<IActionResult> Delete(int id)
-        //{
-        //    var employee = await _employeeService.GetEmployeeByIdAsync(id);
-        //    if (employee == null) return NotFound();
-        //    return View(employee);
-        //}
-        //[HttpPost, ActionName("Delete")]
-        //public async Task<IActionResult> DeleteConfirmed(int id)
-        //{
-        //    var employee = await _employeeService.GetEmployeeByIdAsync(id);
-        //    if (employee == null) return NotFound();
-        //    await _employeeService.DeleteEmployeeAsync(id);
-        //    TempData["Message"] = $"Employee with ID {id} and Name {employee.FullName} has been deleted.";
-        //    return RedirectToAction("List");
-        //}
+        [HttpGet]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var employee = await _employeeService.GetEmployeeByIdAsync(id);
+            if (employee == null) return NotFound();
+            return View(employee);
+        }
+        [HttpPost, ActionName("Delete")]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var employee = await _employeeService.GetEmployeeByIdAsync(id);
+            if (employee == null) return NotFound();
+            await _employeeService.DeleteEmployeeAsync(id);
+            TempData["Message"] = $"Employee with ID {id} and Name {employee.FullName} has been deleted.";
+            return RedirectToAction("List");
+        }
         [HttpGet]
         public async Task<JsonResult> GetDesignations(int departmentId)
         {
