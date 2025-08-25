@@ -13,16 +13,16 @@ A secure, role-based Employee Portal built using ASP .NET Core MVC, designed to 
 
 ## Project Structure
 
--├── Controllers/             # MVC Controllers for handling HTTP requests
--├── Models/                  # Domain and ViewModels
--├── Views/                   # Razor views and layout files
--├── Data/                    # Data access—DbContext and migrations
--├── Services/                # Business logic services (optional)
--├── wwwroot/                 # Static assets: CSS, JS, images
--├── appsettings.json         # Application configuration (e.g., connection strings)
--├── Program.cs               # App settings, middleware, routing setup
--├── EmployeePortalMVC.csproj # Project file and dependencies
--└── README.md                # Project documentation
+- ├── Controllers/             # MVC Controllers for handling HTTP requests
+- ├── Models/                  # Domain and ViewModels
+- ├── Views/                   # Razor views and layout files
+- ├── Data/                    # Data access—DbContext and migrations
+- ├── Services/                # Business logic services (optional)
+- ├── wwwroot/                 # Static assets: CSS, JS, images
+- ├── appsettings.json         # Application configuration (e.g., connection strings)
+- ├── Program.cs               # App settings, middleware, routing setup
+- ├── EmployeePortalMVC.csproj # Project file and dependencies
+- └── README.md                # Project documentation
 
 
 ## Getting Started
